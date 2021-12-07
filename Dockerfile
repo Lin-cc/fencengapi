@@ -17,11 +17,12 @@ COPY ["furionfenceng.EntityFramework.Core/furionfenceng.EntityFramework.Core.csp
 COPY ["furionfenceng.Web.Core/furionfenceng.Web.Core.csproj","furionfenceng.Web.Core/furionfenceng.Web.Core.csproj"]
 COPY ["furionfenceng.Web.Entry/furionfenceng.Web.Entry.csproj","furionfenceng.Web.Entry/furionfenceng.Web.Entry.csproj"]
 RUN dotnet restore "./furionfenceng.sln"
-
+COPY . .
 RUN dotnet build "./furionfenceng.sln" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "./furionfenceng.Web.Entry/furionfenceng.Web.Entry.csproj" -c Release -o /app/publish
+WORKDIR /src/furionfenceng.Web.Entry
+RUN dotnet publish "furionfenceng.Web.Entry.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
