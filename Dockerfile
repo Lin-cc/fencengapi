@@ -12,7 +12,7 @@ WORKDIR /src
 COPY ["furionfenceng.sln", "furionfenceng.sln"]
 COPY ["furionfenceng.Application/furionfenceng.Application.csproj","furionfenceng.Application/furionfenceng.Application.csproj"]
 COPY ["furionfenceng.Core/furionfenceng.Core.csproj","furionfenceng.Core/furionfenceng.Core.csproj"]
-COPY ["furionfenceng.Database.Migrations/furionfenceng.Database.Migrations.csproj","furionfenceng.Database.Migrations/furionfenceng.Database.Migrationscsproj"]
+COPY ["furionfenceng.Database.Migrations/furionfenceng.Database.Migrations.csproj","furionfenceng.Database.Migrations/furionfenceng.Database.Migrations.sproj"]
 COPY ["furionfenceng.EntityFramework.Core/furionfenceng.EntityFramework.Core.csproj","furionfenceng.EntityFramework.Core/furionfenceng.EntityFramework.Core.csproj"]
 COPY ["furionfenceng.Web.Core/furionfenceng.Web.Core.csproj","furionfenceng.Web.Core/furionfenceng.Web.Core.csproj"]
 COPY ["furionfenceng.Web.Entry/furionfenceng.Web.Entry.csproj","furionfenceng.Web.Entry/furionfenceng.Web.Entry.csproj"]
